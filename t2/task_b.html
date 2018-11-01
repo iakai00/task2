@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task B</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <h1>Form validation JavaScript</h1>
+
+    <form name="myForm" novalidate onsubmit="return validateForm()" action="/index.php">
+        <!-- your input elements here -->
+        <label>First name<span style="color: #c60f13"> * </span>:</label>
+        <input id="id_1" type="text" name="firstname" required><br><br>
+
+        <label>Last name<span style="color: #c60f13"> * </span>:</label>
+        <input id="id_2" type="text" name="lastname" required><br><br>
+
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <label>Email address:</label>
+        <input id="id_email" name="email_address" type="email">
+        <br><br>
+
+        <label>Password<span style="color: #c60f13"> * </span>:</label>
+        <input id="id_pwd" name="password" type="password" required>
+        <br><br>
+
+        <label>Phone number:</label>
+        <input id="id_phone" name="phone_number" type="tel" pattern="\+[0-9]{12,13}">
+        <br><br>
+
+        <label>Address:</label>
+        <input id="id_add" name="address" type="text">
+        <br><br>
+
+        <label>Postal Code:</label>
+        <input id="id_post" name="postal_code" type ="text"  pattern="[0-9]{5}"><br>
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
