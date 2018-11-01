@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task B</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <h1>Form validation JavaScript</h1>
+
+    <div class="container">
+
+    <form name="myForm" novalidate onsubmit="return validateForm()" action="#">
+        <!-- your input elements here -->
+        <div class="fname_div" style="padding-top: 10px">
+        <label>First name<span style="color: #c60f13"> * </span>:</label>
+        <input id="id_name" type="text" name="firstname" required>
+            <span id="name_error" ></span>
+        </div>
+        <br>
+        <div class="lname_div">
+        <label>Last name<span style="color: #c60f13"> * </span>:</label>
+        <input id="id_lname" type="text" name="lastname" required>
+            <span id="lname_error" ></span>
+        </div>
+        <br>
+
+        <input type="radio" name="gender" value="male" checked> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+        <div class="email_div">
+        <label>Email address:</label>
+        <input id="id_email" name="email_address" type="email" placeholder="example@example.com">
+            <span id="mail_error" ></span>
+        </div>
+        <br>
+        <div class="pwd_div">
+        <label>Password<span style="color: #c60f13"> * </span>:</label>
+        <input id="id_pwd" name="password" type="password" required>
+            <span id="pwd_error" ></span>
+        </div>
+        <br>
+        <div class="phone_div">
+        <label>Phone number:</label>
+        <input id="id_phone" name="phone_number" type="tel" pattern="\+[0-9]{12,13}" placeholder="+358*********">
+            <span id="phone_error" ></span>
+        </div>
+        <br>
+        <div class="add_div">
+        <label>Address:</label>
+        <input id="id_add" name="address" type="text">
+        </div>
+        <br>
+        <div class="code_div">
+        <label>Postal Code:</label>
+        <input id="id_post" name="postal_code" type ="text"  pattern="[0-9]{5}">
+            <span id="code_error" ></span>
+        </div>
+            <br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset">
+    </form>
+
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>
