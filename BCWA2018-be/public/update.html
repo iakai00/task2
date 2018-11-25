@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        a{text-decoration: none; margin: 0 3px;}
+        h1 {display: inline-block; margin-right: 40px;}
+    </style>
+</head>
+<body>
+<h1>HTML PAGE</h1>
+<a href="index.html">Home</a>
+<a id="update" href="update.html">Update</a>
+<a id="signUp" href="signUp.html">Signup</a>
+<a id="logIn" href="logIn.html">Login</a>
+<p id="message"></p>
+<form  method="post" enctype="multipart/form-data" id="mediaform">
+    <input type="text" name="media_id" placeholder="Media Id">
+    <br>
+    <input type="text" name="category" placeholder="Category">
+    <br>
+    <input type="text" name="title" placeholder="Title">
+    <br>
+    <input type="text" name="details" placeholder="Details">
+    <br>
+    <label>Kuva, ääni tai video
+        <input type="file" name="mediafile" accept="audio/*,video/*,image/*">
+    </label>
+    <br>
+    <button type="submit">Update</button>
+</form>
+<br>
+<div>
+    <img id="image">
+    <audio id="aud" controls></audio>
+    <video id="vid" controls></video>
+</div>
+<script src="js/util.js"></script>
+<script src="js/update.js"></script>
+</body>
+</html>
